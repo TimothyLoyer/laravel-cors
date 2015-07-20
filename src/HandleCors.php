@@ -44,7 +44,7 @@ class HandleCors
 		}
 
 		if ( ! $this->cors->isActualRequestAllowed($request)) {
-			abort(403);
+			abort(403, 'CORS Origin is not allowed');
 		}
 
 		try {
